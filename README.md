@@ -17,13 +17,13 @@ There will be plenty of ways to do this - but I thought this would be a nice sim
 
 The files you will have at the end of this
 
-- /home/stuart/.xbindkeysrc;
-- /home/stuart/.xprofile # an addition to this file - or create it if it does not exist;
-- /home/stuart/bin/screen_brighten.py;
-- /home/stuart/bin/screen_dim.py;
-- /home/stuart/bin/screen_reset.py;
-- /home/stuart/bin/screen_full_dim.py;
-- /home/stuart/.xrandr_brightness_state
+- `/home/stuart/.xbindkeysrc`;
+- `/home/stuart/.xprofile # an addition to this file - or create it if it does not exist`;
+- `/home/stuart/bin/screen_brighten.py`;
+- `/home/stuart/bin/screen_dim.py`;
+- `/home/stuart/bin/screen_reset.py`;
+- `/home/stuart/bin/screen_full_dim.py`;
+- `/home/stuart/.xrandr_brightness_state`
 
 Feel free to change the configuration of course, but for myself I have the following hotkeys - as stated above they work independently of the settings for your physical brightness keys.
 
