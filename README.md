@@ -6,14 +6,14 @@ The below code gives you an extra 10 grades of brightness for each level you get
 
 Versus only using the built-in Thinkpad physical brightness keys (which you can continue to use) - you will get:
 
-    extra sensitivity/ability to make the screen dimmer; and
-    the hotkeys you set will work on your other HDMI/DP/usb-c monitors as well;
-    personally, one area when I will use this is when I want my primary (DP/HDMI) monitor to be very dim for playing music/podcasts to my bigger speakers. It saves me having to fiddle with the monitor buttons. With that said, having played with it for 5 minutes, it seems there is still some back light that is not faded completely away when compared to the what my external monitor buttons can manipulate.
+- extra sensitivity/ability to make the screen dimmer; and
+- the hotkeys you set will work on your other HDMI/DP/usb-c monitors as well;
+- personally, one area when I will use this is when I want my primary (DP/HDMI) monitor to be very dim for playing music/podcasts to mybigger speakers. It saves me having to fiddle with the monitor buttons. With that said, having played with it for 5 minutes, it seemsthere is still some back light that is not faded completely away when compared to the what my external monitor buttons can manipulate.
 
 There will be plenty of ways to do this - but I thought this would be a nice simple piece of code so I decided to write it myself.
 
-    This works on X11 (not wayland). You can check what you are running through echo $XDG_SESSION_TYPE
-    It relies on using xbindkeys to do key bindings to the scripts
+- This works on X11 (not wayland). You can check what you are running through `echo $XDG_SESSION_TYPE`
+- It relies on using xbindkeys to do key bindings to the scripts
 
 The files you will have at the end of this
 
