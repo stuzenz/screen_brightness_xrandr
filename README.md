@@ -34,9 +34,9 @@ Feel free to change the configuration of course, but for myself I have the follo
 
 * A quick side note
 
-This capability is using xrandr --brightness to make the change. I now have a better understanding of what xrandr --brightness does than what I did before I wrote the below code.
+This capability is using `xrandr --brightness` to make the change. I now have a better understanding of what `xrandr --brightness` does than what I did before I wrote the below code.
 
-The flag xrandr --brightness doesn't actually change the brightness of your monitor, it just applies a filter to the colors so they look brighter or darker. Although this code works, I would like to improve it. If I find a good generic way to manipulate screen back light (including connected screens) from the terminal, I might go ahead and enhance this code to take advantage of both approaches.
+The flag `xrandr --brightness` doesn't actually change the brightness of your monitor, it just applies a filter to the colors so they look brighter or darker. Although this code works, I would like to improve it. If I find a good generic way to manipulate screen back light (including connected screens) from the terminal, I might go ahead and enhance this code to take advantage of both approaches.
 
 The documentation states the following:
 
@@ -56,7 +56,7 @@ pacman -S xbindkeys
 
 ### 2. Move the dot files to your home directory
 
-Before blindly copying these 3 files just confirm they do not exist. 
+Before blindly copying these 3 files just confirm they do not exist.
 If they do exist, only edit in the relevant contents
 
 - `.xbindkeysrc`
@@ -97,6 +97,7 @@ xbindkeys
 Copy the scripts to `/home/[YOUR_USER_NAME]/bin`
 
 ## Finally
+
 That should be enough to get it working. If it doesn't work you might want to check if you are using Xorg or wayland - this will only work on Xorg.
 
 Double check that you are using X11 by running
