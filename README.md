@@ -56,7 +56,7 @@ pacman -S xbindkeys
 
 ### 2. Move the dot files to your home directory
 
-Before blindly copying these 3 files just confirm they do not exist.
+Before copying these 3 files to your home directory just confirm they do not exist.
 If they do exist, only edit in the relevant contents
 
 - `.xbindkeysrc`
