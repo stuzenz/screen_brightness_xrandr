@@ -12,6 +12,5 @@ home_path = stream.read().rstrip()
 
 os.system('xrandr --output {} --brightness {}'.format(active_display,str(0)))
 
-f = open('{}/.xrandr_brightness_state'.format(home_path), "w")
-f.write(str(0))
-f.close()
+with open('{}/.xrandr_brightness_state'.format(home_path), "w") as f:
+    f.write(str(0))
