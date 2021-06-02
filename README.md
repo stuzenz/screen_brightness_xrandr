@@ -1,10 +1,24 @@
 # Hotkey extensions to control xrandr --brightness for your monitors
 
+**Table of Contents**
+
+- [Hotkey extensions to control xrandr --brightness for your monitors](#hotkey-extensions-to-control-xrandr---brightness-for-your-monitors)
+  - [Overview](#overview)
+  - [Changes to your system](#changes-to-your-system)
+  - [Side note](#side-note)
+  - [Steps](#steps)
+    - [1. Install and set up xbindkeys](#1-install-and-set-up-xbindkeys)
+    - [2. Move the dot files to your home directory](#2-move-the-dot-files-to-your-home-directory)
+    - [3. Finish setting the xbindkeys up](#3-finish-setting-the-xbindkeys-up)
+    - [3. Copy the scripts from the `bin` directory](#3-copy-the-scripts-from-the-bin-directory)
+  - [Finally](#finally)
+## Overview
+
 I thought this might be useful for someone. The below is probably a 10 minute tutorial for setting up the capability.
 
 The below code gives you an extra 10 grades of brightness for each level you get with the physical brightness key on your computer. The code works for both your main monitor or a secondary monitor that you may have set as primary
 
-Versus only using the built-in Thinkpad physical brightness keys (which you can continue to use) - you will get:
+By using this approach versus only using the built-in Thinkpad physical brightness keys (which you should continue to use) gives you:
 
 - extra sensitivity/ability to make the screen dimmer; and
 - the hotkeys you set will work on your other HDMI/DP/usb-c monitors as well;
@@ -14,6 +28,8 @@ There will be plenty of ways to do this - but I thought this would be a nice sim
 
 - This works on X11 (not wayland). You can check what you are running through `echo $XDG_SESSION_TYPE`
 - It relies on using xbindkeys to do key bindings to the scripts
+
+## Changes to your system
 
 The files you will have at the end of this
 
@@ -32,7 +48,7 @@ Feel free to change the configuration of course, but for myself I have the follo
 - Alt + screen brighten (alt-mod-f6) == 10% brighten screen;
 - Alt + project (alt-mod-f7) == brightness back to 100%
 
-* A quick side note
+## Side note
 
 This capability is using `xrandr --brightness` to make the change. I now have a better understanding of what `xrandr --brightness` does than what I did before I wrote the below code.
 
@@ -43,8 +59,6 @@ The documentation states the following:
 > --brightness brightness - multiply the gamma values on the crtc currently attached to the output to specified floating value. Useful for overly bright or overly dim outputs. However, this is a software only modification, if your hardware has support to actually change the brightness, you will probably prefer to use xbacklight.
 
 I should note the code below has thresholds in place so that you cannot go below the brightness thresholds of 0 and 1.
-
-​
 
 ## Steps
 
@@ -58,6 +72,7 @@ pacman -S xbindkeys
 
 Before copying these 3 files to your home directory just confirm they do not exist.
 If they do exist, only edit in the relevant contents
+
 
 - `.xbindkeysrc`
 
@@ -75,15 +90,17 @@ If they do exist, only edit in the relevant contents
   Alt + XF86Display
 ```
 
+
 - `.xrandr_brightness_state`
 
 ```
 1
 ```
 
+
 - `.xprofile`
 
-```
+```bash
 #Start xbindkeys
 xbindkeys
 ```
@@ -102,4 +119,4 @@ That should be enough to get it working. If it doesn't work you might want to ch
 
 Double check that you are using X11 by running
 
-echo $XDG_SESSION_TYPE
+`echo $XDG_SESSION_TYPE`
